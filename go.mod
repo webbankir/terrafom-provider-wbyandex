@@ -6,8 +6,9 @@ require (
 	github.com/aws/aws-sdk-go v1.19.39
 	github.com/c2h5oh/datasize v0.0.0-20200112174442-28bbd4740fee
 	github.com/golang/protobuf v1.4.1
-	github.com/google/uuid v1.1.1
+	github.com/google/uuid v1.1.2
 	github.com/grpc-ecosystem/go-grpc-middleware v1.0.0
+	github.com/hashicorp/terraform-plugin-docs v0.5.0 // indirect
 	github.com/hashicorp/terraform-plugin-sdk v1.0.0
 	github.com/mitchellh/go-homedir v1.1.0
 	github.com/yandex-cloud/go-genproto v0.0.0-20210824140926-1bca7bc0c005

@@ -32,7 +32,7 @@ jobs:
       -
         name: Import GPG key
         id: import_gpg
-        uses: webbankir/ghaction-import-gpg
+        uses: webbankir/ghaction-import-gpg@v0.0.1
         env:
           # These secrets will need to be configured for the repository:
           GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}

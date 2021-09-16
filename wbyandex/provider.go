@@ -128,6 +128,8 @@ func provider(emptyFolder bool) terraform.ResourceProvider {
 
 		DataSourcesMap: map[string]*schema.Resource{
 			"wbyandex_lock_box_secret_payload": dataSourceWebbankirYandexLockBoxSecretPayload(),
+			"wbyandex_certificate_manager_list": dataSourceWebbankirYandexCertificateManagerList(),
+			"wbyandex_certificate_manager_content": dataSourceWebbankirYandexCertificateManagerContent(),
 		},
 
 		ResourcesMap: map[string]*schema.Resource{

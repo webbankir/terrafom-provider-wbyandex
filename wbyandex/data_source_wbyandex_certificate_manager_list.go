@@ -66,6 +66,11 @@ func dataSourceWebbankirYandexCertificateManagerList() *schema.Resource {
 							Elem:     &schema.Schema{Type: schema.TypeString},
 							Computed: true,
 						},
+
+						"status": {
+							Type:     schema.TypeString,
+							Computed: true,
+						},
 					},
 				},
 			},
@@ -95,6 +100,7 @@ func dataSourceWebbankirYandexCertificateManagerListRead(d *schema.ResourceData,
 			"description": v.Description,
 			"labels":      v.Labels,
 			"domains":     v.Domains,
+			"status": certificatemanager.Certificate_Status_name[int32(v.Status)],
 		})
 	}
 

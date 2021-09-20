@@ -3,7 +3,7 @@ HOSTNAME=tf.webbankir.com
 NAMESPACE=suslovs
 NAME=wbyandex
 BINARY=terraform-provider-${NAME}
-VERSION=0.1.4
+VERSION=0.1.6
 OS_ARCH=darwin_amd64
 
 default: install

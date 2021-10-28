@@ -46,16 +46,86 @@ func (m *BackendGroup) SetGrpc(v *GrpcBackendGroup) {
 	}
 }
 
+func (m *BackendGroup) SetStream(v *StreamBackendGroup) {
+	m.Backend = &BackendGroup_Stream{
+		Stream: v,
+	}
+}
+
 func (m *BackendGroup) SetCreatedAt(v *timestamp.Timestamp) {
 	m.CreatedAt = v
+}
+
+type StreamBackendGroup_SessionAffinity = isStreamBackendGroup_SessionAffinity
+
+func (m *StreamBackendGroup) SetSessionAffinity(v StreamBackendGroup_SessionAffinity) {
+	m.SessionAffinity = v
+}
+
+func (m *StreamBackendGroup) SetBackends(v []*StreamBackend) {
+	m.Backends = v
+}
+
+func (m *StreamBackendGroup) SetConnection(v *ConnectionSessionAffinity) {
+	m.SessionAffinity = &StreamBackendGroup_Connection{
+		Connection: v,
+	}
+}
+
+type HttpBackendGroup_SessionAffinity = isHttpBackendGroup_SessionAffinity
+
+func (m *HttpBackendGroup) SetSessionAffinity(v HttpBackendGroup_SessionAffinity) {
+	m.SessionAffinity = v
 }
 
 func (m *HttpBackendGroup) SetBackends(v []*HttpBackend) {
 	m.Backends = v
 }
 
+func (m *HttpBackendGroup) SetConnection(v *ConnectionSessionAffinity) {
+	m.SessionAffinity = &HttpBackendGroup_Connection{
+		Connection: v,
+	}
+}
+
+func (m *HttpBackendGroup) SetHeader(v *HeaderSessionAffinity) {
+	m.SessionAffinity = &HttpBackendGroup_Header{
+		Header: v,
+	}
+}
+
+func (m *HttpBackendGroup) SetCookie(v *CookieSessionAffinity) {
+	m.SessionAffinity = &HttpBackendGroup_Cookie{
+		Cookie: v,
+	}
+}
+
+type GrpcBackendGroup_SessionAffinity = isGrpcBackendGroup_SessionAffinity
+
+func (m *GrpcBackendGroup) SetSessionAffinity(v GrpcBackendGroup_SessionAffinity) {
+	m.SessionAffinity = v
+}
+
 func (m *GrpcBackendGroup) SetBackends(v []*GrpcBackend) {
 	m.Backends = v
+}
+
+func (m *GrpcBackendGroup) SetConnection(v *ConnectionSessionAffinity) {
+	m.SessionAffinity = &GrpcBackendGroup_Connection{
+		Connection: v,
+	}
+}
+
+func (m *GrpcBackendGroup) SetHeader(v *HeaderSessionAffinity) {
+	m.SessionAffinity = &GrpcBackendGroup_Header{
+		Header: v,
+	}
+}
+
+func (m *GrpcBackendGroup) SetCookie(v *CookieSessionAffinity) {
+	m.SessionAffinity = &GrpcBackendGroup_Cookie{
+		Cookie: v,
+	}
 }
 
 func (m *HeaderSessionAffinity) SetHeaderName(v string) {
@@ -84,6 +154,46 @@ func (m *LoadBalancingConfig) SetLocalityAwareRoutingPercent(v int64) {
 
 func (m *LoadBalancingConfig) SetStrictLocality(v bool) {
 	m.StrictLocality = v
+}
+
+func (m *LoadBalancingConfig) SetMode(v LoadBalancingMode) {
+	m.Mode = v
+}
+
+type StreamBackend_BackendType = isStreamBackend_BackendType
+
+func (m *StreamBackend) SetBackendType(v StreamBackend_BackendType) {
+	m.BackendType = v
+}
+
+func (m *StreamBackend) SetName(v string) {
+	m.Name = v
+}
+
+func (m *StreamBackend) SetBackendWeight(v *wrappers.Int64Value) {
+	m.BackendWeight = v
+}
+
+func (m *StreamBackend) SetLoadBalancingConfig(v *LoadBalancingConfig) {
+	m.LoadBalancingConfig = v
+}
+
+func (m *StreamBackend) SetPort(v int64) {
+	m.Port = v
+}
+
+func (m *StreamBackend) SetTargetGroups(v *TargetGroupsBackend) {
+	m.BackendType = &StreamBackend_TargetGroups{
+		TargetGroups: v,
+	}
+}
+
+func (m *StreamBackend) SetHealthchecks(v []*HealthCheck) {
+	m.Healthchecks = v
+}
+
+func (m *StreamBackend) SetTls(v *BackendTls) {
+	m.Tls = v
 }
 
 type HttpBackend_BackendType = isHttpBackend_BackendType

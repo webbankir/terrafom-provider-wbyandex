@@ -21,6 +21,15 @@ type CloudServiceClient struct {
 	getConn func(ctx context.Context) (*grpc.ClientConn, error)
 }
 
+// Create implements resourcemanager.CloudServiceClient
+func (c *CloudServiceClient) Create(ctx context.Context, in *resourcemanager.CreateCloudRequest, opts ...grpc.CallOption) (*operation.Operation, error) {
+	conn, err := c.getConn(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return resourcemanager.NewCloudServiceClient(conn).Create(ctx, in, opts...)
+}
+
 // Delete implements resourcemanager.CloudServiceClient
 func (c *CloudServiceClient) Delete(ctx context.Context, in *resourcemanager.DeleteCloudRequest, opts ...grpc.CallOption) (*operation.Operation, error) {
 	conn, err := c.getConn(ctx)

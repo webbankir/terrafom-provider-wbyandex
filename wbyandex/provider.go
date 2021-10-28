@@ -130,6 +130,7 @@ func provider(emptyFolder bool) terraform.ResourceProvider {
 			"wbyandex_lock_box_secret_payload": dataSourceWebbankirYandexLockBoxSecretPayload(),
 			"wbyandex_certificate_manager_list": dataSourceWebbankirYandexCertificateManagerList(),
 			"wbyandex_certificate_manager_content": dataSourceWebbankirYandexCertificateManagerContent(),
+			"wbyandex_billing_account": dataSourceWebbankirYandexBillingAccountContent(),
 		},
 
 		ResourcesMap: map[string]*schema.Resource{

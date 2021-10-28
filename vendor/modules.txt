@@ -201,7 +201,7 @@ github.com/ulikunitz/xz/lzma
 # github.com/vmihailenco/msgpack v3.3.3+incompatible
 github.com/vmihailenco/msgpack
 github.com/vmihailenco/msgpack/codes
-# github.com/yandex-cloud/go-genproto v0.0.0-20210824140926-1bca7bc0c005
+# github.com/yandex-cloud/go-genproto v0.0.0-20211028095821-ae507b7629fe
 ## explicit
 github.com/yandex-cloud/go-genproto/yandex/cloud
 github.com/yandex-cloud/go-genproto/yandex/cloud/access
@@ -210,6 +210,7 @@ github.com/yandex-cloud/go-genproto/yandex/cloud/ai/translate/v2
 github.com/yandex-cloud/go-genproto/yandex/cloud/ai/vision/v1
 github.com/yandex-cloud/go-genproto/yandex/cloud/api
 github.com/yandex-cloud/go-genproto/yandex/cloud/apploadbalancer/v1
+github.com/yandex-cloud/go-genproto/yandex/cloud/billing/v1
 github.com/yandex-cloud/go-genproto/yandex/cloud/certificatemanager/v1
 github.com/yandex-cloud/go-genproto/yandex/cloud/compute/v1
 github.com/yandex-cloud/go-genproto/yandex/cloud/compute/v1/instancegroup
@@ -250,12 +251,13 @@ github.com/yandex-cloud/go-genproto/yandex/cloud/quota
 github.com/yandex-cloud/go-genproto/yandex/cloud/reference
 github.com/yandex-cloud/go-genproto/yandex/cloud/resourcemanager/v1
 github.com/yandex-cloud/go-genproto/yandex/cloud/serverless/apigateway/v1
+github.com/yandex-cloud/go-genproto/yandex/cloud/serverless/containers/v1
 github.com/yandex-cloud/go-genproto/yandex/cloud/serverless/functions/v1
 github.com/yandex-cloud/go-genproto/yandex/cloud/serverless/mdbproxy/v1
 github.com/yandex-cloud/go-genproto/yandex/cloud/serverless/triggers/v1
 github.com/yandex-cloud/go-genproto/yandex/cloud/vpc/v1
 github.com/yandex-cloud/go-genproto/yandex/cloud/ydb/v1
-# github.com/yandex-cloud/go-sdk v0.0.0-20210824141121-182aedd44a25
+# github.com/yandex-cloud/go-sdk v0.0.0-20211012083249-d09272b4a71c
 ## explicit
 github.com/yandex-cloud/go-sdk
 github.com/yandex-cloud/go-sdk/dial
@@ -265,11 +267,13 @@ github.com/yandex-cloud/go-sdk/gen/ai/vision
 github.com/yandex-cloud/go-sdk/gen/apiendpoint
 github.com/yandex-cloud/go-sdk/gen/apigateway
 github.com/yandex-cloud/go-sdk/gen/apploadbalancer
+github.com/yandex-cloud/go-sdk/gen/billing
 github.com/yandex-cloud/go-sdk/gen/certificatemanager
 github.com/yandex-cloud/go-sdk/gen/certificatemanagerdata
 github.com/yandex-cloud/go-sdk/gen/compute
 github.com/yandex-cloud/go-sdk/gen/compute/instancegroup
 github.com/yandex-cloud/go-sdk/gen/containerregistry
+github.com/yandex-cloud/go-sdk/gen/containers
 github.com/yandex-cloud/go-sdk/gen/dataproc
 github.com/yandex-cloud/go-sdk/gen/dns
 github.com/yandex-cloud/go-sdk/gen/functions

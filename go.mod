@@ -10,8 +10,8 @@ require (
 	github.com/grpc-ecosystem/go-grpc-middleware v1.0.0
 	github.com/hashicorp/terraform-plugin-sdk v1.0.0
 	github.com/mitchellh/go-homedir v1.1.0
-	github.com/yandex-cloud/go-genproto v0.0.0-20210824140926-1bca7bc0c005
-	github.com/yandex-cloud/go-sdk v0.0.0-20210824141121-182aedd44a25
+	github.com/yandex-cloud/go-genproto v0.0.0-20211028095821-ae507b7629fe
+	github.com/yandex-cloud/go-sdk v0.0.0-20211012083249-d09272b4a71c
 	google.golang.org/genproto v0.0.0-20200323114720-3f67cca34472
 	google.golang.org/grpc v1.28.0
 )
